@@ -8,7 +8,7 @@ class Vehicle {
         this.speed = 0;
         this.mileage = mileage;
         this.started = false;
-        this.numberOfWheels = 0;
+        this.numberOfWheels = 4;
     }
 
     start() {
@@ -76,7 +76,7 @@ class Vehicle {
         if (this.numberOfWheels == 8 && 8 == wheels) {
             console.log(this.model + " " + this.make + " is a Truck");
         } else if (this.numberOfWheels == 4 && 4 == wheels) {
-            console.log(this.model + " " + this.make + " is a CAr");
+            console.log(this.make + " " + this.model + " is a CAR");
         } else if (this.numberOfWheels == 2 && 2 == wheels) {
             console.log(this.model + " " + this.make + " is a Bike");
         } else {
@@ -86,6 +86,14 @@ class Vehicle {
 }
 
 //This exports things you want to use from this "module", more info in readme
+/*
 module.exports = {
     Vehicle
-}
+}*/
+let nV=new Vehicle('Honda','civic','2010','black','2500');
+nV.start();
+nV.accelerate();
+nV.decelerate();
+console.log(nV.make)
+nV.typeOfVehicle(4)
+console.log(nV.year)
